@@ -35,9 +35,14 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'bling/vim-airline'
 let g:airline_theme='powerlineish'
 
-let g:airline_left_sep=''
-let g:airline_right_sep=''
+"set ttimeoutlen=50
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
 let g:airline_section_z=''
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+
 
 call vundle#end()            " required
 filetype plugin indent on    " required
