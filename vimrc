@@ -38,12 +38,10 @@ Plugin 'yonchu/accelerated-smooth-scroll'
 "运行:Dox，将生成数据结构或函数的注释骨架
 Plugin 'vim-scripts/DoxygenToolkit.vim'
 
-Plugin 'powerline/fonts'
-
 Plugin 'vim-airline/vim-airline-themes'
 
 Plugin 'bling/vim-airline'
-"let g:airline_theme='powerlineish'
+let g:airline_theme='powerlineish'
 "let g:airline_theme='molokai'
 nnoremap <A-2> :bn<CR>
 nnoremap <A-s-tab> :bp<CR>
@@ -51,16 +49,16 @@ let g:airline_powerline_fonts=1
 if !exists('g:airline_symbols')  
     let g:airline_symbols={} 
 endif
-set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 11  "config font for gvim  ”for gvim"
-let g:airline_left_sep = '»'
-let g:airline_left_sep = '▶'
-let g:airline_right_sep = '«'
-let g:airline_right_sep = '◀'
 let g:airline#extensions#whitespace#enabled=0 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
-"let g:airline#extensions#tabline#left_sep = ' '
-"let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = ''
 
 
 call vundle#end()            " required
@@ -118,6 +116,7 @@ endif
 if has("autocmd")
       au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
   endif
+set formatoptions-=r
   
 " OmniCppComplete
 let OmniCpp_NamespaceSearch = 1
