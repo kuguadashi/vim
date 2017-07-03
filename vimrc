@@ -24,7 +24,7 @@ endif
 let g:neocomplcache_force_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
 let g:neocomplcache_force_omni_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
 let g:neocomplcache_force_omni_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
-let g:neocomplcache_enable_auto_select = 1
+"let g:neocomplcache_enable_auto_select = 1
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
 
@@ -43,8 +43,6 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'bling/vim-airline'
 let g:airline_theme='powerlineish'
 "let g:airline_theme='molokai'
-nnoremap <A-2> :bn<CR>
-nnoremap <A-s-tab> :bp<CR>
 let g:airline_powerline_fonts=1  
 if !exists('g:airline_symbols')  
     let g:airline_symbols={} 
@@ -84,8 +82,8 @@ set incsearch
 set history=1000
 set number 
 set laststatus=2
-"set smartindent
-"set autoindent
+set smartindent
+set autoindent
 set cindent
 set tabstop=4
 set shiftwidth=4
@@ -94,6 +92,7 @@ set cino=:0g0t0(sus
 set tags +=./tags
 set tags +=~/.vim/ctags/ctag
 set tags +=~/.vim/ctags/cptag
+set tags +=~/.vim/ctags/drive_tag
 
 nmap <leader>j <C-]>
 nmap <leader>k <C-o>
